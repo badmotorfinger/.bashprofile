@@ -46,7 +46,7 @@ sudo apt install -y brave-browser
 
 # Install other applications
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch shutter dconf-editor xclip cowsay lolcat ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch shutter dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla ttf-mscorefonts-installer
 
 # Install Guake
 sudo add-apt-repository ppa:linuxuprising/guake
@@ -57,7 +57,7 @@ sudo apt install -y guake
 
 echo "vm.swappiness=1" | sudo tee -a /etc/sysctl.conf
 printf "\ndisplay-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
-printf "\ndisplay-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
+printf "\nsession-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
 
 # Install VirtualBox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -106,6 +106,8 @@ sudo apt install -y inkscape
 # Remove default installed programs
 sudo apt remove -y thunderbird
 sudo apt remove -y rhythmbox
+sudo apt remove -y transmission-gtk
+sudo apt remove -y mintbackup
 
 # Install FreeCAD
 sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
