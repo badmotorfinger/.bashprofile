@@ -46,7 +46,7 @@ sudo apt install -y brave-browser
 
 # Install other applications
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch shutter dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch shutter dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
 
 # Install Guake
 sudo add-apt-repository ppa:linuxuprising/guake
