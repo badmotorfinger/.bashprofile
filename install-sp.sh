@@ -1,6 +1,11 @@
 echo 'Ensure you have the backup_home and installation_packages variable set to the correct location'
 echo 'Also ensure you have the packages WebStorm, Rider, DataGrip, pencil available for installation'
 
+# Set up Proton VPN
+https://protonvpn.com/support/linux-vpn-tool/
+https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md
+
+
 read -p "Press ENTER to continue"
 
 backup_home=/media/vince/LinuxStorage/homebackup/vince
@@ -28,7 +33,7 @@ cp -v $backup_home/homescreenlayout.sh ~/
 cp -v $backup_home/startup.sh ~/
 cp -v $backup_home/.vim_mru_files ~/
 cp -vrp $backup_home/.git-radar/ ~/.git-radar
-cp -vrp $backup_home/.FreeCAD ~/FreeCAD
+cp -vrp $backup_home/.FreeCAD ~/.FreeCAD
 cp -vrp $backup_home/sourcecode ~/sourcecode
 
 # Brave Browser
@@ -46,7 +51,10 @@ sudo apt install -y brave-browser
 
 # Install other applications
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch shutter dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
+
+# Install Joplin
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 
 # Install Guake
 sudo add-apt-repository ppa:linuxuprising/guake
@@ -56,8 +64,9 @@ sudo apt install -y guake
 #bash restore
 
 echo "vm.swappiness=1" | sudo tee -a /etc/sysctl.conf
-printf "\ndisplay-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
-printf "\nsession-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
+
+# printf "\ndisplay-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
+# printf "\nsession-setup-script=/home/vince/homescreenlayout.sh" | sudo tee -a /etc/lightdm/lightdm.conf.d/70-linuxmint.conf
 
 # Install VirtualBox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
