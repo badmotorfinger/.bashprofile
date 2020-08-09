@@ -51,7 +51,13 @@ sudo apt install -y brave-browser
 
 # Install other applications
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox sudo youtube-dl ttf-mscorefonts-installer
+
+# Install Bpytop
+# sudo python3 -m pip install psutil
+# git clone https://github.com/aristocratos/bpytop.git
+# cd bpytop
+# sudo make install
 
 # Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -149,3 +155,9 @@ sudo systemctl disable mssql-server.service
 # Increase the number of files linux will monitor for changes. This is mainly for Angular so it can watch for file changes
 
 echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
+
+# Install Lutris
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt-get update
+sudo apt-get install lutris
+
