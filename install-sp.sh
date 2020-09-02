@@ -51,7 +51,11 @@ sudo apt install -y brave-browser
 
 # Install other applications
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox sudo youtube-dl ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
+
+# youtube downloader
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # Install Bpytop
 # sudo python3 -m pip install psutil
@@ -88,6 +92,7 @@ config config --local status.showUntrackedFiles no
 sudo tar xzf $installation_packages/WebStorm*.tar.gz -C /opt/
 sudo tar xzf $installation_packages/datagrip*.tar.gz -C /opt/
 sudo tar xzf $installation_packages/JetBrains*.tar.gz -C /opt/
+sudo $installation_packages/lsd_0.17.0_amd64.deb
 sudo apt install ./pencil_3.1.0.ga_amd64.deb
 
 # Install ASPNET Core
