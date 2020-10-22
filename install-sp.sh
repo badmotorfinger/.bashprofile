@@ -50,8 +50,10 @@ sudo apt install -y brave-browser
 
 
 # Install other applications
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox gtkhash nemo-gtkhash ttf-mscorefonts-installer
 
-sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox ttf-mscorefonts-installer
+# Needed for Virt-Manager
+sudo apt install -y libvirt-bin gir1.2-spiceclientgtk-3.0
 
 # youtube downloader
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
@@ -166,3 +168,6 @@ sudo add-apt-repository ppa:lutris-team/lutris
 sudo apt-get update
 sudo apt-get install lutris
 
+
+sudo systemctl enable ufw.service --now
+sudo ufw enable
