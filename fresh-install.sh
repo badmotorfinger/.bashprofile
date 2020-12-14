@@ -20,7 +20,7 @@ sudo apt install -y brave-browser
 
 
 # Install other applications
-sudo apt install -y ultracopier  chromium-browser gimp vim arandr git qbittorrent neofetch samba flameshot dconf-editor xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox gtkhash inkscape nemo-gtkhash keepassxc ttf-mscorefonts-installer
+sudo apt install -y chromium-browser gimp vim arandr git qbittorrent neofetch samba flameshot xclip cowsay lolcat meld remmina remmina-plugin-rdp filezilla firefox gtkhash inkscape nemo-gtkhash keepassxc ttf-mscorefonts-installer
 
 # Install flatpaks
 flatpak install flathub org.x.Warpinator
@@ -110,7 +110,4 @@ sudo apt remove -y rhythmbox
 sudo apt remove -y transmission-gtk
 sudo apt remove -y mintbackup
 
-# Set up dotfile repo
-git clone --bare git@github.com:badmotorfinger/homeConfigs.git $HOME/dotFiles
-git config --local status.showUntrackedFiles no
 
